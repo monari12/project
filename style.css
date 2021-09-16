@@ -1,0 +1,119 @@
+:root{
+    /* 여기에 --변수 만듬 */
+    --main-color:#ff9f43;
+    --sub-color:#ffda79;
+}
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background: #ccc;
+    background-image: url(../images/title-bg1.jpg);
+    background-size:cover;
+    height:100vh; /* 화면 높이값에 맞춰 채움 (모바일에서 많이 씀) */
+    background-position:center;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size:18px;
+    min-width: 1100px; /* 최소 사이즈 지정 */
+}
+
+#main-header{
+    background:rgb(0, 0, 0);
+    /* border-bottom:1px dashed #fff; */
+    color:#fff;
+    height:80px;
+
+
+}
+#gnb a{
+    color:#fff;
+}
+#main-header >h1 a{
+    float:left;
+    color:var(--main-color);
+    margin-top: 16px;
+    margin-left:30px;
+}
+
+
+#main-gnb{
+    /* outline:1px solid red; */
+    float:right;
+    margin-right: 32px;
+    margin-top:28px;
+    
+}
+#main-gnb #gnb{
+    display:inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#gnb > li {
+    display:inline-block;
+    margin-left:3em; /*em 글자단위*/
+   
+
+}
+#main-gnb .search-box{
+    display:inline-block;
+    margin-left: 2em;
+    vertical-align:middle;
+}
+#main-gnb .search-box .search{
+    padding:5px;
+    margin-bottom:4px;
+    vertical-align: middle;
+}
+
+#main-gnb .search-box button{
+    padding:5px 10px;;
+    background:var(--main-color); /* 인터넷 익스플로어 지원안함*/
+    color:#fff;
+    border-style:none;
+
+}
+
+.title{
+    color:#fff;
+    font-size:40px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    text-align:center;
+    line-height:100px;
+    text-shadow: 0 0 8px #000;
+    padding:20px;
+    
+}
+.title > button{
+    width:150px;
+    height:35px;
+    background-color:rgba(0,0,0,0.7);
+    border-radius: 20px;
+    border-style: none;
+    color:#fff;
+    font-size:20px;
+    
+
+}
+.title > button a{
+    color:#fff;
+}
+.title > button a:hover{
+    color:var(--main-color);
+}
+
+ /* 메뉴 hover시 메인컬러 텍스트 반영 (var함수활용) */
+ #gnb > li a:hover{
+     color:var(--main-color);
+ }
